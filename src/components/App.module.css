@@ -1,0 +1,29 @@
+body {
+    margin: 50px auto;
+    padding: 40px;
+    width: 500px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+button {
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+input {
+    display: flex;
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+label {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
