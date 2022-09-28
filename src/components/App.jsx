@@ -45,13 +45,13 @@ export class App extends Component {
 
     const { contacts } = this.state;
 
-    contacts.find(
-      contact => newContact.name.toLowerCase() === contact.name.toLowerCase()
-    )
-      ? alert(`${newContact.name} is already in contacts.`)
-      : this.setState(({ contacts }) => ({
-        contacts: [newContact, ...contacts],
-      }));
+    if (contacts.find(contact => newContact.name.toLowerCase() === contact.name.toLowerCase())) {
+      alert(`${newContact.name} is already in contacts.`)
+      return;
+    }
+    this.setState(({ contacts }) => ({
+      contacts: [newContact, ...contacts],
+    }));
   };
 
   deleteContact = contactId => {
