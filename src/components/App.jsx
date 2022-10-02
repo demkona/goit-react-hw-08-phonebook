@@ -44,8 +44,9 @@ export class App extends Component {
     };
 
     const { contacts } = this.state;
+    const isAudit = contacts.find(contact => newContact.name.toLowerCase() === contact.name.toLowerCase())
 
-    if (contacts.find(contact => newContact.name.toLowerCase() === contact.name.toLowerCase())) {
+    if (isAudit) {
       alert(`${newContact.name} is already in contacts.`)
       return;
     }
