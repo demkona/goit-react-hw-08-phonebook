@@ -4,10 +4,8 @@ import css from '../ContactListItem/ContactListItem.module.css';
 
 export const ContactListItem = ({ name, number, id, onDeleteContact }) => (
     <li className={css.contactListItem}>
-        <p className={css.contact}>
-            {' '}
-            {name}: {number}
-        </p>
+        <p className={css.contact}>{name}</p>
+        <a className={css.contactLink} href="tel:{number}">{number}</a>
         <button
             className={css.buttonDelete}
             type="button"
@@ -17,6 +15,7 @@ export const ContactListItem = ({ name, number, id, onDeleteContact }) => (
         </button>
     </li>
 );
+
 
 ContactListItem.propTypes = {
     id: PropTypes.string.isRequired,
