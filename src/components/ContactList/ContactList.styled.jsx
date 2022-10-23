@@ -14,8 +14,15 @@ justify-content: space-between;
 margin-bottom: 20px;
 `;
 
-export const ContactListText = styled.p`
-  margin-bottom: 10px;
+export const ContactListLink = styled.a`
+color: currentColor;
+  transition: scale 250ms linear, background-color 250ms linear,
+    color 250ms linear;
+
+  :hover,
+  :focus {
+  scale:1.3;
+  }
 `;
 
 export const ContactListBtn = styled.button`
@@ -31,5 +38,6 @@ export const ContactListBtn = styled.button`
   :focus {
     background-color: black;
     color: #e1e4e9;
+     scale:1.3;
   }
 `;

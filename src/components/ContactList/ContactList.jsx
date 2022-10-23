@@ -2,7 +2,7 @@ import {
   ContactListBox,
   ContactListItem,
   ContactListBtn,
-  ContactListText,
+  ContactListLink,
 } from './ContactList.styled';
 import { getContacts, getFilterValue } from 'redux/selectors';
 import { deleteContact } from 'redux/contactsSlice';
@@ -31,8 +31,8 @@ const ContactList = () => {
     <ContactListBox>
       {sortContactsByName().map(({ id, name, number }) => (
         <ContactListItem key={id}>
-          <ContactListText>{name}</ContactListText>
-          <ContactListText>{number}</ContactListText>
+          <ContactListLink href="tel:{number}">{name}</ContactListLink>
+          <ContactListLink href="tel:{number}">{number}</ContactListLink>
           <ContactListBtn
             type="button"
             onClick={() => {
@@ -42,8 +42,9 @@ const ContactList = () => {
             Delete
           </ContactListBtn>
         </ContactListItem>
-      ))}
-    </ContactListBox>
+      ))
+      }
+    </ContactListBox >
   );
 };
 

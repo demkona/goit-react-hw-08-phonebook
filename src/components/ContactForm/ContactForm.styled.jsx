@@ -36,5 +36,6 @@ export const FormButton = styled.button`
   :focus {
     background-color: black;
     color: #e1e4e9;
+    scale:1.3;
   }
 `;
