@@ -1,9 +1,0 @@
-.form {
-    display: flex;
-    flex-direction: column;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(148, 142, 142);
-    padding: 30px;
-    margin-bottom: 30px;
-}

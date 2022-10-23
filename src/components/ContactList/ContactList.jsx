@@ -1,24 +1,50 @@
+import {
+  ContactListBox,
+  ContactListItem,
+  ContactListBtn,
+  ContactListText,
+} from './ContactList.styled';
+import { getContacts, getFilterValue } from 'redux/selectors';
+import { deleteContact } from 'redux/contactsSlice';
+import { useSelector, useDispatch } from 'react-redux';
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import { ContactListItem } from '../ContactListItem/ContactListItem';
-import css from '../ContactList/ContactList.module.css';
+const ContactList = () => {
+  const dispatch = useDispatch();
+  const { contacts } = useSelector(getContacts);
+  const filter = useSelector(getFilterValue);
 
-export const ContactList = ({ contacts, onDeleteContact }) => (
-    <ul className={css.list}>
-        {contacts.map(({ id, name, number }) => (
-            <ContactListItem
-                key={id}
-                id={id}
-                name={name}
-                number={number}
-                onDeleteContact={onDeleteContact}
-            />
-        ))}
-    </ul>
-);
+  const filterContactsOnChange = () => {
+    if (!filter) {
+      return contacts;
+    }
+    return contacts.filter(contact =>
+      contact.name.toUpperCase().includes(filter.toUpperCase())
+    );
+  };
 
-ContactList.propTypes = {
-    contacts: PropTypes.array.isRequired,
-    onDeleteContact: PropTypes.func.isRequired,
+  const sortContactsByName = () =>
+    [...filterContactsOnChange()].sort((firstContact, secondContact) =>
+      firstContact.name.localeCompare(secondContact.name)
+    );
+
+  return (
+    <ContactListBox>
+      {sortContactsByName().map(({ id, name, number }) => (
+        <ContactListItem key={id}>
+          <ContactListText>{name}</ContactListText>
+          <ContactListText>{number}</ContactListText>
+          <ContactListBtn
+            type="button"
+            onClick={() => {
+              dispatch(deleteContact(id));
+            }}
+          >
+            Delete
+          </ContactListBtn>
+        </ContactListItem>
+      ))}
+    </ContactListBox>
+  );
 };
+
+export default ContactList;
