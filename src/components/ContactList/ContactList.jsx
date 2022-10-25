@@ -44,7 +44,7 @@ const ContactList = () => {
         </ContactListItem>
       ))
       }
-    </ContactListBox >
+    </ContactListBox>
   );
 };
 
