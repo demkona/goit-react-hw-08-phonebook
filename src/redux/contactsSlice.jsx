@@ -45,7 +45,4 @@ const persistConfig = {
 };
 
 export const { addContact, deleteContact } = contactsSlice.actions;
-export const persistedReducer = persistReducer(
-  persistConfig,
-  contactsSlice.reducer
-);
+export const persistedReducer = persistReducer(persistConfig, contactsSlice.reducer);
