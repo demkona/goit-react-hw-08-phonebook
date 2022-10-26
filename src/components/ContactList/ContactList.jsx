@@ -1,51 +1,24 @@
-import {
-  ContactListBox,
-  ContactListItem,
-  ContactListBtn,
-  ContactListLink,
-} from './ContactList.styled';
-import { getContacts, getFilterValue } from 'redux/selectors';
-import { deleteContact } from 'redux/contactsSlice';
-import { useSelector, useDispatch } from 'react-redux';
+import { ContactListBox, ContactListItem } from './ContactList.styled';
+import { useGetContactsQuery } from 'service/api';
+import ContactItem from '../ContactItem/ContactItem';
 
-const ContactList = () => {
-  const dispatch = useDispatch();
-  const { contacts } = useSelector(getContacts);
-  const filter = useSelector(getFilterValue);
+const ContactList = ({ filter }) => {
+  const { data } = useGetContactsQuery();
 
-  const filterContactsOnChange = () => {
-    if (!filter) {
-      return contacts;
-    }
-    return contacts.filter(contact =>
-      contact.name.toUpperCase().includes(filter.toUpperCase())
+  const contactsFiltered = data?.filter(contact =>
+    contact.name.toLowerCase().includes(filter.toLowerCase()));
+
+  if (contactsFiltered) {
+    return (
+      <ContactListBox>
+        {contactsFiltered.map(({ id, name, phone }) => (
+          <ContactListItem key={id}>
+            <ContactItem id={id} name={name} number={phone} />
+          </ContactListItem>
+        ))}
+      </ContactListBox>
     );
   };
-
-  const sortContactsByName = () =>
-    [...filterContactsOnChange()].sort((firstContact, secondContact) =>
-      firstContact.name.localeCompare(secondContact.name)
-    );
-
-  return (
-    <ContactListBox>
-      {sortContactsByName().map(({ id, name, number }) => (
-        <ContactListItem key={id}>
-          <ContactListLink href="tel:{number}">{name}</ContactListLink>
-          <ContactListLink href="tel:{number}">{number}</ContactListLink>
-          <ContactListBtn
-            type="button"
-            onClick={() => {
-              dispatch(deleteContact(id));
-            }}
-          >
-            Delete
-          </ContactListBtn>
-        </ContactListItem>
-      ))
-      }
-    </ContactListBox>
-  );
 };
 
 export default ContactList;
