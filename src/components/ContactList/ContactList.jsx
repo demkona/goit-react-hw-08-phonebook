@@ -12,6 +12,7 @@ const ContactList = ({ filter }) => {
   if (!contactsFiltered) {
     return <Loader />
   }
+
   return (
     <>
       <ContactListBox>
