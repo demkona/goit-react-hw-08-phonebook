@@ -1,5 +1,4 @@
 @import-normalize;
-/* bring in normalize.css styles */
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,6 +6,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  animation: changeBg 30s infinite alternate linear;
+}
+
+@keyframes changeBg {
+  0% {
+    background: #93b0ff;
+  }
+
+  25% {
+    background: #8bffbf;
+  }
+
+  50% {
+    background: #b2f88f;
+  }
+
+  75% {
+    background: #f3fc81;
+  }
+
+  100% {
+    background: #ff9d85;
+  }
 }
 
 code {

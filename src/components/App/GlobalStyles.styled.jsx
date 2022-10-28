@@ -6,7 +6,6 @@ const GlobalStyles = css`
       'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #28303f;
   }
 
   code {
