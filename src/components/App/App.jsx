@@ -6,10 +6,8 @@ import Filter from 'components/Filter';
 import ContactList from 'components/ContactList';
 import { useState } from 'react';
 
-
 const App = () => {
   const [filter, setFilter] = useState('');
-
   const handleChange = e => {
     setFilter(e);
   };

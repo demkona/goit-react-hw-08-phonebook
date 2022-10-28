@@ -2,9 +2,8 @@ import styled from '@emotion/styled';
 import { Form } from 'formik';
 
 export const FormBox = styled(Form)`
-display: grid;
-justify-content:center;
-  width: 600px;
+  display: grid;
+  justify-content: center;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
@@ -12,7 +11,7 @@ justify-content:center;
 `;
 
 export const FormLabel = styled.label`
-margin: 10px 0px;
+  margin: 10px 0px;
   width: 60px;
 `;
 
@@ -36,6 +35,6 @@ export const FormButton = styled.button`
   :focus {
     background-color: black;
     color: #e1e4e9;
-    scale:1.1;
+    scale: 1.1;
   }
 `;

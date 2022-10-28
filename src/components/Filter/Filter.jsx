@@ -2,7 +2,7 @@ import { FilterTitle, FilterInput } from './Filter.styled';
 
 const Filter = ({ filter, handleChange }) => {
   return (
-    <div>
+    <>
       <FilterTitle>Find contacts by name</FilterTitle>
       <FilterInput
         type="text"
@@ -12,7 +12,7 @@ const Filter = ({ filter, handleChange }) => {
         title="Search field"
         required
       />
-    </div>
+    </>
   );
 };
 

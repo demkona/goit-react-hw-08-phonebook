@@ -4,7 +4,6 @@ import Notiflix from 'notiflix';
 
 const ContactItem = ({ id, name, number }) => {
     const [deleteContact, { isLoading: isDeleting }] = useDeleteContactMutation();
-
     return (
         <>
             <ContactListLink href="tel:{number}">{name}</ContactListLink>
