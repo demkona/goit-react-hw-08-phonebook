@@ -17,7 +17,7 @@ const ContactForm = () => {
     data.some(contact => contact.name === name)
       ? Notiflix.Notify.warning(`${name} is already in contacts`)
       : addContact({ name: name, phone: number })
-      && Notiflix.Notify.success('added contact')
+      && Notiflix.Notify.success(`added contact ${name}`)
 
     setName('');
     setNumber('');
@@ -50,6 +50,7 @@ const ContactForm = () => {
           as={FormInput}
           onChange={handleChange}
           required
+          placeholder="Enter name"
         />
         <FormLabel>Number</FormLabel>
         <Field
@@ -61,6 +62,7 @@ const ContactForm = () => {
           as={FormInput}
           onChange={handleChange}
           required
+          placeholder="Enter number"
         />
         <FormButton type="submit">Add contact</FormButton>
       </FormBox>

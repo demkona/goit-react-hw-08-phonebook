@@ -11,6 +11,7 @@ const Filter = ({ filter, handleChange }) => {
         onChange={e => handleChange(e.target.value)}
         title="Search field"
         required
+        placeholder="Enter name"
       />
     </>
   );
