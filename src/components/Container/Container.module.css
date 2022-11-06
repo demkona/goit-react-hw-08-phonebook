@@ -1,0 +1,8 @@
+.container {
+  width: 350px;
+  background-color: rgb(180, 180, 180);
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

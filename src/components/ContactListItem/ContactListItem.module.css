@@ -1,0 +1,16 @@
+.contactListItem {
+  display: flex;
+
+  justify-content: space-between;
+  border: 1px solid #ffc107;
+  background-color: #ffc107;
+  border-radius: 5px;
+}
+
+.contactListItem:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.contact {
+  margin: 0;
+}
