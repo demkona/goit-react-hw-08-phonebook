@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { authSelectors, authOperations } from '../../redux/auth';
 import styles from './UserMenu.module.css';
-import { FcBusinessman } from 'react-icons/fc'
+import { FcButtingIn } from 'react-icons/fc'
 
 
 
@@ -15,7 +15,7 @@ export default function UserMenu() {
   return (
     <div className={styles.container_user}>
       <span className={styles.name}>Welcome {name} {' '}
-        <FcBusinessman />
+        <FcButtingIn />
       </span>
       <Button type="button" onClick={() => dispatch(authOperations.logOut())}>
         Logout

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { authSelectors } from '../../redux/auth';
 import { Navbar } from 'react-bootstrap';
-import scc from './Navigation.module.css'
+import s from './Navigation.module.css'
 
 const styles = {
   activeLink: {
@@ -15,7 +15,7 @@ const Navigation = () => {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
     <Navbar>
-      <NavLink to="/" exact className={scc.link} activeStyle={styles.activeLink}>
+      <NavLink to="/" exact className={s.link} activeStyle={styles.activeLink}>
         Home
       </NavLink>
 
@@ -24,7 +24,7 @@ const Navigation = () => {
           <NavLink
             to="/contacts"
             exact
-            className={scc.link}
+            className={s.link}
             activeStyle={styles.activeLink}
           >
             Contacts
