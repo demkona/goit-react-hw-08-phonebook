@@ -50,7 +50,7 @@ const ContactForm = () => {
 
   return (
     <Form onSubmit={handleSubmit} className={s.form}>
-      <Form.Group className="mb-3">
+      <Form.Group className="mb-2">
         <Form.Label>
           Name
           <Form.Control
@@ -65,7 +65,7 @@ const ContactForm = () => {
           />
         </Form.Label>
       </Form.Group>
-      <Form.Group className="mb-3">
+      <Form.Group className="mb-2">
         <Form.Label>
           Number
           <Form.Control
