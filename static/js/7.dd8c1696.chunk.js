@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-homework-template"]=this["webpackJsonpreact-homework-template"]||[]).push([[7],{162:function(e,t,o){"use strict";o.r(t);o(1);var c=o(157),r=o(2);t.default=function(){return Object(r.jsx)("div",{children:Object(r.jsxs)("h1",{children:["Hello, I'm your Phone Book"," ",Object(r.jsx)(c.a,{})]})})}}}]);
+//# sourceMappingURL=7.dd8c1696.chunk.js.map
