@@ -7,6 +7,7 @@ import Container from './components/Container/Container';
 import PrivateRoute from './routes/PrivateRoute';
 import PublicRoute from './routes/PublicRoute';
 import { authOperations, } from './redux/auth';
+import LinearProgress from './components/Loader/Loader'
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage'));
@@ -25,7 +26,7 @@ export default function App() {
       <>
         <AppBar />
         <Switch>
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense fallback={<LinearProgress />}>
             <PublicRoute exact path="/">
               <HomePage />
             </PublicRoute>

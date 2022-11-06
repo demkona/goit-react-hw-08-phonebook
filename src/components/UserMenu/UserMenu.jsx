@@ -14,7 +14,7 @@ export default function UserMenu() {
 
   return (
     <div className={styles.container_user}>
-      <span className={styles.name}>Welcome, {name} {' '}
+      <span className={styles.name}>Welcome {name} {' '}
         <FcButtingIn />
       </span>
       <Button type="button" onClick={() => dispatch(authOperations.logOut())}>
