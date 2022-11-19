@@ -1,0 +1,10 @@
+.newItem {
+  list-style: circle;
+}
+
+.link {
+  display: block;
+  color: currentColor;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
