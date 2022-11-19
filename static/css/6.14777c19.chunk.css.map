@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/News/News.module.css"],"names":[],"mappings":"AAAA,qBACE,iBACF,CAEA,kBACE,aAAc,CACd,kBAAmB,CACnB,oBAAqB,CACrB,kBACF","file":"6.14777c19.chunk.css","sourcesContent":[".newItem {\n  list-style: circle;\n}\n\n.link {\n  display: block;\n  color: currentColor;\n  text-decoration: none;\n  margin-bottom: 15px;\n}\n"]}
