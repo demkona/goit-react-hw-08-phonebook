@@ -14,10 +14,10 @@ export const News = () => {
     return null;
   }
   const oneNews = news.articles
-  console.log(oneNews)
 
   return (
     <>
+      <h2 className={css.title}>News</h2>
       <ul className={css.newItem} >
         {oneNews.map(({ title, url, urlToImage }) => (<li key={title} >
           <Link className={css.link} to={url} target="_blank">
