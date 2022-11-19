@@ -11,8 +11,8 @@ export default function AppBar() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
     <Navbar>
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
       <Navigation />
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </Navbar>
   );
 }
