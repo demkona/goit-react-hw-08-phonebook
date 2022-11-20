@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-import styles from './pages.module.css';
+import css from './pages.module.css';
 
 export default function RegisterView() {
   const dispatch = useDispatch();
@@ -33,9 +33,9 @@ export default function RegisterView() {
 
   return (
     <div>
-      <Form onSubmit={handleSubmit} autoComplete="off" className={styles.form}>
+      <Form onSubmit={handleSubmit} autoComplete="off" className={css.form}>
         <Form.Group className="mb-3">
-          <Form.Label className={styles.label}>
+          <Form.Label className={css.label}>
             Name
             <Form.Control
               placeholder="Enter your name"
@@ -67,7 +67,7 @@ export default function RegisterView() {
             placeholder="Password"
           />
         </Form.Group>
-        <Button type="submit">
+        <Button className={css.button} type="submit">
           Register
         </Button>
       </Form>
