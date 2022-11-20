@@ -4,8 +4,6 @@ import { BsFillJournalBookmarkFill } from 'react-icons/bs';
 import css from '../pages/pages.module.css'
 
 export default function HomePage() {
-
-
   return (
     <>
       <h1 className={css.titleHome}>
