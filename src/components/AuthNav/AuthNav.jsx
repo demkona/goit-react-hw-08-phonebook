@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import s from './AuthNav.module.css';
+import css from './AuthNav.module.css';
 const styles = {
   activeLink: {
-      color: '#ffc107'
+    color: '#ffc107'
   },
 };
 
@@ -13,8 +13,8 @@ export default function AuthNav() {
       <NavLink
         to="/register"
         exact
-        className={s.link}
-        
+        className={css.link}
+
         activeStyle={styles.activeLink}
       >
         Sign up
@@ -22,8 +22,8 @@ export default function AuthNav() {
       <NavLink
         to="/login"
         exact
-        className={s.link}
-        activeStyle={styles.activeLink}
+        className={css.link}
+        activeStyle={styles.link}
       >
         Log in
       </NavLink>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
 import { Button, Form } from 'react-bootstrap';
-import styles from './pages.module.css';
+import css from './pages.module.css';
 
 export default function LoginView() {
   const dispatch = useDispatch();
@@ -29,9 +29,9 @@ export default function LoginView() {
 
   return (
     <div>
-      <Form onSubmit={handleSubmit} className={styles.form} autoComplete="off">
+      <Form onSubmit={handleSubmit} className={css.form} autoComplete="off">
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label className={styles.label}>Email address</Form.Label>
+          <Form.Label className={css.label}>Email address</Form.Label>
           <Form.Control
             type="email"
             value={email}
@@ -50,7 +50,7 @@ export default function LoginView() {
             placeholder="Password"
           />
         </Form.Group>
-        <Button type="submit">
+        <Button className={css.button} type="submit">
           Enter
         </Button>{' '}
       </Form>
